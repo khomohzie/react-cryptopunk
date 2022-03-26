@@ -1,0 +1,19 @@
+#toggle {
+  display: none;
+}
+
+.themeSwitchContainer {
+  display: flex;
+  background-color: var(--switch-background);
+  border: 1px solid var(--switch-border);
+  border-radius: 50px;
+  padding: 15px;
+  justify-content: center;
+  align-items: center;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.themeSwitchContainer > img {
+  height: 25px;
+}
