@@ -9,7 +9,7 @@ const Main = ({ selectedPunk, punkListData }) => {
 
 	useEffect(() => {
 		setActivePunk(punkListData[selectedPunk]);
-	}, [selectedPunk]);
+	}, [punkListData, selectedPunk]);
 
 	return (
 		<div className="main">
