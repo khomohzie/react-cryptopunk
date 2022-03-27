@@ -9,6 +9,7 @@
 }
 
 body {
+	background-color: var(--light-background);
 	margin: 0;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
 		"Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
@@ -30,8 +31,9 @@ a {
 :root {
 	--white: #fff;
 	--gray: #eee;
-	--dark-gray: #1c1c1e;
+	--dark-gray: #1a1c1e;
 	--light-gray: #a1a5b0;
+	--midnight-green: #55654b;
 	--black: #000;
 }
 
@@ -49,6 +51,8 @@ a {
 	--switch-border: var(--dark-gray);
 
 	--header-items: var(--light-gray);
+
+	--scrollbar-background: var(--light-gray);
 }
 .theme-light {
 	--light-text: var(--black);
@@ -64,4 +68,6 @@ a {
 	--search-border: var(--dark-gray);
 
 	--header-items: var(--black);
+
+	--scrollbar-background: var(--midnight-green);
 }

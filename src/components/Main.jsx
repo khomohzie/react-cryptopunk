@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import instagramLogo from "../assets/owner/instagram.png";
 import twitterLogo from "../assets/owner/twitter.png";
 import moreIcon from "../assets/owner/more.png";
 import "./Main.css";
 
-const Main = () => {
+const Main = ({ selectedPunk, punkListData }) => {
+	const [activePunk, setActivePunk] = useState(punkListData[0]);
+
+	useEffect(() => {
+		setActivePunk(punkListData[selectedPunk]);
+	}, [selectedPunk]);
+
 	return (
 		<div className="main">
 			<div className="mainContent">
@@ -47,18 +53,36 @@ const Main = () => {
 										rel="noopener noreferrer"
 									>
 										@
-										{activePunk.user?.username
-											? activePunk.user.username
+										{activePunk.owner.user
+											? activePunk.owner.user.username
 											: "UnknowUser"}
 									</a>
 								</div>
 							</div>
-							<div className="ownerLink">
-								<img src={instagramLogo} alt="instagramLogo" />
-							</div>
-							<div className="ownerLink">
-								<img src={twitterLogo} alt="twitterLogo" />
-							</div>
+
+							<a
+								href="https://instagram.com/khomohzie"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<div className="ownerLink">
+									<img
+										src={instagramLogo}
+										alt="instagramLogo"
+									/>
+								</div>
+							</a>
+
+							<a
+								href="https://twitter.com/daniekomo"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<div className="ownerLink">
+									<img src={twitterLogo} alt="twitterLogo" />
+								</div>
+							</a>
+
 							<a
 								href={activePunk.permalink}
 								target="_blank"

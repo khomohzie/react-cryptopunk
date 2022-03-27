@@ -35,7 +35,7 @@ const Header = () => {
 
 			<div className="loginButton">
 				<a
-					href="https://testnets.opensea.io/collection/cp-punks-31z9zk77zk"
+					href="https://testnets.opensea.io/collection/cp-punks-rujvnbxhch"
 					target="_blank"
 					rel="noopener noreferrer"
 				>
